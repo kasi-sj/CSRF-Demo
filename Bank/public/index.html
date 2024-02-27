@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer Money - BankXYZ</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .label-input-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      label {
+        width: 120px; /* Adjust the width as needed */
+        margin-right: 10px;
+      }
+
+      input[type="number"],
+      input[type="text"],
+      button {
+        flex: 1;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Transfer Money - Bank ABC</h1>
+      <form action="/transfer" method="POST">
+        <div class="label-input-container">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" required />
+        </div>
+        <div class="label-input-container">
+          <label for="toAccount">To Account:</label>
+          <input type="text" id="toAccount" name="toAccount" required />
+        </div>
+        <button type="submit">Transfer</button>
+      </form>
+    </div>
+  </body>
+</html>
